@@ -92,6 +92,54 @@ Flow-Track provides a **smart, low-code solution** that automates:
 
 ---
 
+## 🧩 How It Works & Runs
+
+### 🏗️ System Architecture
+Flow-Track is a modular system divided into three key layers:
+
+1. **Frontend (UI Layer)**
+   - Built using HTML, CSS, and JavaScript for responsive dashboards.
+   - Displays camera streams, density indicators, and alerts in real time.
+   - Uses Google Maps APIs for organizer location visualization.
+
+2. **Logic & Analytics Layer**
+   - Processes camera feed using integrated algorithms (OpenCV/TensorFlow.js) for head count and motion tracking.
+   - Calculates density = `(Total People Count) / (Visible Area in sq. ft.)`.
+   - Compares computed density against threshold levels to trigger alerts.
+
+3. **Communication & Database Layer**
+   - Uses Firebase or Node.js backend for:
+     - Real-time alert propagation.
+     - Organizer authentication and location updates.
+     - Storing past crowd analytics for review and prediction training.
+
+---
+
+### ⚡ Running the Application
+
+#### 🖥️ Local Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/keerthivardhanm/Digithon2025_TeamICDAT003.git
+   cd Digithon2025_TeamICDAT003
+   ```
+2. Open the `index.html` file in a browser to launch the app locally.
+3. Add your **Google Maps API key** in the JS configuration file.
+4. (Optional) Connect to Firebase for real-time synchronization.
+
+#### 🌐 Deployment
+- Host on **Firebase Hosting**, **Netlify**, or **Vercel**.
+- Ensure the camera and map permissions are enabled.
+- Admin can log in → upload camera feeds → assign volunteer regions.
+- Organizers get live notifications and can respond from the dashboard.
+
+#### 🔍 Monitoring
+- System continuously analyzes incoming camera data.
+- Updates crowd density and risk color indicators dynamically.
+- Sends immediate SMS/email/notification alerts for abnormal crowd movement.
+
+---
+
 ## 📈 Impact
 
 - Reduces **response time** in emergencies by up to 60%.  
